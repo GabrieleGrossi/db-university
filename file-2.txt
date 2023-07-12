@@ -80,3 +80,14 @@ ON `courses`.`id` = `course_teacher`.`course_id`
 JOIN `teachers`
 ON	`course_teacher`.`teacher_id` = `teachers`.`id`
 WHERE `departments`.`name` = 'Dipartimento di Matematica';
+
+7. Not finish 
+SELECT `students`.`id`, `students`.`name`, `students`.`surname`, `courses`.`name`
+COUNT 
+FROM `students`
+JOIN `exam_student`
+ON `students`.`id`= `exam_student`.`student_id`
+JOIN `exam` 
+ON `exam`.`id` = `exam_student`.`exam_id
+JOIN `courses`
+ON `course`.`id`= `exams`.`course_id
